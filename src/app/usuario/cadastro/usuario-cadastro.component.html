@@ -1,13 +1,22 @@
-<form>
-    <div>
-        <label>Nome</label>
-        <input type="text" name="nome" [(ngModel)]="usuario.nome" />
+
+<div class="p-input-icon-left">
+    <div class="p-inputgroup">
+        <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+        <input type="text"  [(ngModel)]="usuario.nome" pInputText placeholder="Nome">
     </div>
-    <div>
-        <label>Email</label>
-        <input type="email" name="email" [(ngModel)]="usuario.email" />
+    <div class="p-inputgroup">
+      <span class="p-inputgroup-addon"><i class="pi pi-password"></i></span>
+      <input type="password"  [(ngModel)]="usuario.email" pInputText placeholder="Email">
     </div>
+  <br/>
     <div>
-        <button (click)="salvar()">Salvar</button>
+      <button
+        pButton
+        class="p-button-outlined"
+        (click)="salvar()"
+        label="Salvar"
+      >
+      </button>
     </div>
-</form>
+</div>
+
